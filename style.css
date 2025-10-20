@@ -4,6 +4,8 @@ body {
     color: #333;
     font-family: Lato, sans-serif;
 }
+
+
 .matrix {
     width: 500px;
     margin: 0 auto;
@@ -17,11 +19,14 @@ body {
     font-family: fantasy, cursive;
 }
 
+
 @media (max-width:768px) {
 .matrix { 
     text-align: center;
-    }
+    }   
 }
+
+
 .todo {
     display: block;
     width: 500px;
@@ -36,14 +41,14 @@ body {
     display: flex;
 }
 ul {
-    margin:0;
+    margin: 0;
     padding: 0px;
 }
 li, h3 {
-    list-style:none;
+    list-style: none;
 }
 input,button{
-    outline:none;
+    outline: none;
 }
 .todo__button {
     background: none;
@@ -57,6 +62,8 @@ input,button{
 .todo__button:hover {
     color: #3a3A3a;
 }
+
+
 /* Heading */
 .todo__title,
 .todo__label[for='new-task'] {
@@ -68,6 +75,8 @@ input,button{
     margin: 0;
     text-transform: uppercase;
 }
+
+
 input[type="text"] {
     margin: 0;
     font-size: 18px;
@@ -84,6 +93,7 @@ input[type="text"]:focus {
     color: #333;
 }
 
+
 /* New Task */
 label[for='new-task'] {
     display: block;
@@ -93,12 +103,12 @@ label[for='new-task'] {
     width: 318px;
 }
 
+
 /* Task list */
 .todo__list .todo__item {
     overflow: hidden;
     padding: 20px 0;
-    border-bottom: 1px solid #eee;
-
+    border-bottom: 1px solid #eee;    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,7 +116,6 @@ label[for='new-task'] {
 .todo__item > * {
     vertical-align: middle;
 }
-
 .todo__checkbox {
     margin: 0 10px;
 }
@@ -119,6 +128,8 @@ label[for='new-task'] {
 .todo__item >    input[type="text"] {
     width: 226px
 }
+
+
 .todo__delete img {
     height: 2em;
     transform: rotateZ(45deg);
@@ -128,22 +139,22 @@ label[for='new-task'] {
     transform: rotateZ(0);
 }
 
+
 /* Completed */
 #completed-tasks .todo__text {
-    text-decoration: line-through
+    text-decoration: line-through;
     color: #888;
 }
 
+
 /* Edit Task */
 .todo__item input[type=text] {
-    display:none
+    display: none
 }
-
 .todo__item--edit input[type=text] {
-    display:inline-block;
-    width:224px
+    display: inline-block;
+    width: 224px
 }
-
 .todo__item--edit .todo__text {
-    display:none;
+    display: none;
 }
