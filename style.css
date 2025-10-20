@@ -5,7 +5,7 @@ body {
     font-family: Lato, sans-serif;
 }
 
-
+/* Matrix block */
 .matrix {
     width: 500px;
     margin: 0 auto;
@@ -26,7 +26,7 @@ body {
     }   
 }
 
-
+/* Todo block */
 .todo {
     display: block;
     width: 500px;
@@ -35,21 +35,10 @@ body {
 .todo__input {
     width: 56%;
     display: inline-block;
-    flex-grow: 1
+    flex-grow: 1;
 }
 .todo__row {
     display: flex;
-}
-ul {
-    margin: 0;
-    padding: 0px;
-}
-li, 
-h3 {
-    list-style: none;
-}
-input,button{
-    outline: none;
 }
 .todo__button {
     background: none;
@@ -77,7 +66,7 @@ input,button{
     text-transform: uppercase;
 }
 
-
+/* Inputs */
 input[type="text"] {
     margin: 0;
     font-size: 18px;
@@ -96,14 +85,19 @@ input[type="text"]:focus {
 
 
 /* New Task */
-label[for='new-task'] {
-    display: block;
-    margin: 0 0 20px;
-}
 #new-task {
     width: 318px;
 }
 
+/* Lists reset */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
 
 /* Task list */
 .todo__list .todo__item {
@@ -154,8 +148,15 @@ label[for='new-task'] {
 }
 .todo__item--edit input[type=text] {
     display: inline-block;
-    width: 224px
+    width: 224px;
 }
 .todo__item--edit .todo__text {
     display: none;
+}
+
+/* Accessibility */
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #3a3a3a;
+  outline-offset: 2px;
 }
