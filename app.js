@@ -1,29 +1,26 @@
-//Document is the DOM can be accessed in the console with document.window.
-// Tree is from the top, html, body, p etc.
-
-//Problem: User interaction does not provide the correct results.
-//Solution: Add interactivity so the user can manage daily tasks.
-//Break things down into smaller steps and take each step at a time.
-
-
-// Event handling, user interaction is what starts the code execution.
-
-var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+// DOM
+const taskInput = document.getElementById("new-task");
+const addButton = document.querySelector(".todo__button");
+const incompleteTaskHolder = document.getElementById("incomplete-tasks");
+const completedTasksHolder = document.getElementById("completed-tasks");
 
 
 //New task list item
-var createNewTaskElement=function(taskString){
+function createNewTaskElement=function(text){
+    const li = document.createElement("li");
+    li.className = "todo__item"
 
-    var listItem=document.createElement("li");
 
-    //input (checkbox)
-    var checkBox=document.createElement("input");//checkbx
-    //label
-    var label=document.createElement("label");//label
-    //input (text)
+    const check = document.createElement("input");
+    check.type = "checkbox";
+    check.className = "todo__checkbox";
+    
+
+    const label = document.createElement("label");
+    label.className = "todo__text";
+    label.innerText = text;
+
+
     var editInput=document.createElement("input");//text
     //button.edit
     var editButton=document.createElement("button");//edit button
